@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+    
+
+}
+
+.navbar {
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-logo {
+    height: 50px;
+    width: 100px;
+    
+}
+
+
+
+.logo {
+
+    background-image: url(./AmazonL/amazon_logo.png);
+    background-size: cover;
+    width: 100px;
+    height: 50px;
+}
+
+.border {
+    border: 2px transparent;
+}
+
+.border:hover {
+
+    border: 1px solid white;
+}
+
+.ad1{
+    color: #cccccc;
+    font-size: 0.85rem;
+    margin-left: 15px; ;
+
+}
+
+.ad2{
+
+font-size: 1rem;
+margin-left: 3px;
+
+}
+.add-icon{
+
+    display: flex;
+}
+
+
+
+/* =============================================Box3===================================== */
+
+.nav-search{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: red;
+    width: 620px;
+    height: 35px;
+    border-radius: 4px;
+}
+
+.search-select{
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;
+}
+
+.search-input{
+width: 100%;
+border: none;
+
+}
+
+.search-icon{
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #febd56;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: #0f1111;
+}
+
+.nav-search:hover{
+    border: 2px solid #febd56;
+}
+
+/* =============================Box4======================================= */
+
+span{
+    font-size: 12px;
+}
+
+.nav2{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* =============================Box5======================================= */
+.nav-cart i{
+    font-size: 30px;
+}
+.nav-cart{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* =============================Pannel======================================= */
+
+
+.pannel{
+    height: 39px;
+    background-color: #222f3d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.pannel-ops p{
+    width: 70%;
+    display: inline;
+    font-size: 14px;
+    margin-left: 15px;
+   
+    
+}
+
+p:hover{
+    
+    border: #f3f3f3 solid 1px;
+
+}
+
+.pannel-deals{
+    font-weight: 700;
+}
+
+/* =============================Hero Section======================================= */
+
+.hero-section{
+    background: url(https://images-eu.ssl-images-amazon.com/images/G/31/Events/img23/Jupiter23/Homepage/Phase3/J23_P3B_PC_NTA_Hero_C4_ET_2x._CB574339486_.jpg);
+    height: 600px;
+    background-size: cover;
+}
