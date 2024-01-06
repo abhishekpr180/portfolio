@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+</head>
+
+<body>
+    <h1>To do list</h1>
+    <form action="">
+        <label for="">Enter your name:</label>
+        <input type="text" id="name">
+        <label for="">Enter the task you want to do:</label>
+        <input type="text" id="task">
+        <label for="">Enter the date for the task:</label>
+        <input type="date" id="date">
+        <button>SUBMIT</button>
+    </form>
+    <h3>Your saved tasks</h3>
+    <!-- <div class="box">
+        <h3></h3>
+    </div> -->
+
+    <script>
+        let btn = document.querySelector("button")
+
+btn.addEventListener("click",()=>{
+    event.preventDefault()
+
+    // let input = document.querySelectorAll("input")
+    // input.forEach((x)=>{
+    //     console.log(x.value);  
+    // })
+
+        let name = document.querySelector("#name").value
+        let task = document.querySelector("#task").value
+        let date = document.querySelector("#date").value
+        
+        // let title = document.createElement("h3")
+        // title.innerText="Your saved tasks"
+        // document.body.append(title)
+
+        let div = document.createElement("div")
+        let ul = document.createElement("ul")
+        let li1 = document.createElement("li")
+        let li2 = document.createElement("li")
+        let li3 = document.createElement("li")
+
+        li1.innerText=name
+        li2.innerText=task
+        li3.innerText=date
+
+        div.appendChild(ul)
+        ul.appendChild(li1)
+        ul.appendChild(li2)
+        ul.appendChild(li3)
+
+        document.body.append(div)
+})
+    </script>
+</body>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    h1 {
+        text-decoration: underline;
+        font-family: 'Your Preferred Font';
+        color: #4CAF50;
+        text-align: center;
+    }
+
+    form {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: auto 38%;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+    div{
+        display: flex;
+        margin: 10px auto;
+        /* align-items: center; */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        height: 30px;
+        max-width: 400px;
+        align-items: center;
+        justify-content: center;
+    }
+    h3 {
+        text-decoration: underline;
+        font-family: 'Your Preferred Font';
+        color: #4CAF50;
+        text-align: center;
+    }
+    /* ol{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } */
+    li{
+        display: inline;
+        padding: 15px;
+        
+    }
+
+
+</style>
+
+</html>
