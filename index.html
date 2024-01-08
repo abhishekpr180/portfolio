@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/393fc502f9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./abhishek-logo-for-header.webp" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#port">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Developer</p>
+                <h1>Hi,I'm <span>Abhishek</span> <br>Pratap From Bengaluru</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------------------about---------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./WhatsApp Image 2024-01-06 at 12.10.41_4f3ad756.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle"> About <span id="abc">Me</span> </h1>
+                    <br>
+                    <p>Hello there! I'm Abhishek, a passionate and highly motivated coder who recently graduated with a
+                        Bachelor's degree in Computer Science. My academic journey has equipped me with a solid
+                        foundation in various programming languages, algorithms, and software development methodologies.
+                    </p><br>
+
+                    <p> Thrive on challenges and have a strong desire to continuously expand my knowledge and skills
+                        in the dynamic field of technology. Throughout my academic tenure, I actively sought out
+                        opportunities to apply theoretical concepts in real-world scenarios, participating in coding
+                        competitions and collaborative projects.</p><br>
+
+                    <!-- <p>As a recent graduate, I am eager to embark on my professional journey and contribute to the
+                        ever-evolving landscape of technology. I am confident in my ability to adapt quickly to new
+                        environments, learn on the fly, and contribute effectively to a team. My enthusiasm for coding
+                        extends beyond the classroom, and I am always exploring new technologies and frameworks to stay
+                        ahead of the curve.</p><br>
+
+                    <q>I am currently seeking a challenging and rewarding opportunity that allows me to leverage my
+                        skills and contribute meaningfully to a progressive organization. If you're looking for a
+                        dedicated and driven individual with a strong foundation in computer science and a passion for
+                        coding, I would love to connect and explore how I can contribute to your team.</q> -->
+
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('Eduction')">Eduction</p>
+                    </div>
+                    <div class="tab-cointains active-tab" id="Skills">
+                        <br>
+                        <ul>
+                            <li><span>WebTechnology</span><br>"I excel in HTML, CSS, JavaScript, and React for front-end
+                                development, complemented by strong skills in Spring for robust back-end solutions."
+                            </li>
+                        </ul>
+                        <ul>
+                            <li><span>JAVA</span><br>"I possess advanced proficiency in both Java and Advanced Java,
+                                showcasing expertise in developing robust and scalable applications."
+                            </li>
+                        </ul>
+                        <ul>
+                            <li><span>Database And SQL </span><br>"I demonstrate exceptional proficiency in SQL Plus,
+                                leveraging my expertise to efficiently manage and query databases with precision and
+                                effectiveness."
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-cointains" id="Projects">
+                        <ul>
+                            <br>
+                            <li><span>Amazon</span><br>
+                                "I've successfully developed an Amazon-inspired website using HTML and CSS, with ongoing
+                                enhancements to ensure a seamless and visually appealing online shopping experience."
+                            </li>
+                        </ul>
+                        <ul>
+                            <li><span>To-Do-List</span><br>
+                                "I've skillfully crafted a dynamic and user-friendly to-do list using JavaScript,
+                                showcasing my proficiency in front-end development and interactivity."</li>
+                        </ul>
+                        <ul>
+                            <li><span>Login Page For Social Media</span><br>
+                                "I've crafted a login page website using HTML and CSS, demonstrating my proficiency in
+                                front-end development and design."</li>
+                        </ul>
+                    </div>
+                    <div class="tab-cointains" id="Eduction">
+                        <ul>
+                            <br>
+                            <li><span>High School</span><br>I proudly completed my high school education at Aditya Birla Public
+                                School, where I gained valuable knowledge and skills that have laid the groundwork for
+                                my future endeavors.</li>
+                        </ul>
+                        <ul>
+                            <li><span>Btech In Computer Science</span><br>In 2023, I successfully completed my Bachelor
+                                of Technology (B.Tech) in Computer Science from Bhopal, India, equipping myself with a
+                                strong foundation in the field and paving the way for a promising career in technology.
+                            </li>
+                        </ul>
+                        <ul>
+                            <li><span>Eductation 3</span><br>3 Eduction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------services------------------ -->
+    <div id="Services">
+        <div class="container">
+            <h1 class="subtitle">My <span> Services</span></h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-html5"></i>
+                    <h2>Web Development </h2>
+                    <p>Offer expertise in developing dynamic and responsive websites using HTML, CSS, and JavaScript.
+                    </p>
+                    <a href="">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-java"></i>
+                    <h2>Java Programming</h2>
+                    <p>Emphasize strong knowledge and skills in Java programming for application development.</p>
+                    <a href="">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Database And SQL </h2>
+                    <p>Position yourself as a database expert with proficiency in SQL for data manipulation and
+                        retrieval.</p>
+                    <a href="">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- -----------------------portfolio------------------ -->
+
+    <div id="port">
+        <div class="container">
+            <h1 class="sub-title">My <span>Work</span></h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./Untitled_Export-9vaLdktNy (1).jpeg" alt="">
+                    <div class="layer">
+                        <h3>Amazon</h3>
+                        <p>
+
+                            I've created an Amazon-inspired website using HTML and CSS, demonstrating my proficiency in
+                            front-end development. Ongoing efforts involve refining and optimizing the site for a
+                            seamless user experience, reflecting my commitment to continuous improvement and innovation
+                            in web design.</p>
+                        <a href="./amazon.html"><i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="./download.avif" alt="">
+                    <div class="layer">
+                        <h3>Todo List</h3>
+                        <p>
+                            I've built a JavaScript-powered to-do list, showcasing my front-end scripting skills. This
+                            dynamic application enables users to manage tasks efficiently with a user-friendly
+                            interface, emphasizing practicality and engagement. Ongoing refinements aim to deliver a
+                            streamlined and effective tool for seamless task organization.</p>
+                        <a href="./to-do-list_project.html"><i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="./work-1.png" alt="">
+                    <div class="layer">
+                        <h3>Login Page For Social Media</h3>
+                        <p>Login Page For Social Media</span><br>I've just crafted a sleek login page using
+                            HTML and CSS. The HTML structure features user-friendly input fields, while CSS styling
+                            brings a visually appealing and responsive layout to life. From thoughtful color schemes
+                            to interactive hover effects, this project has honed my front-end development skills,
+                            delivering a polished and professional user interface.</p>
+                        <a href="./login1.html"><i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <!-- ----------------------------------------COntact------------------------------ -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact <span>Me</span></h1>
+                    <p><i class="fas fa-paper-plane"></i>abhishekpratapsingh810@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>+91 7070876872</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/abhishekpr_/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/abhishek-pratap-singh-a2b493244/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://twitter.com/Abhishe60374679"><i class="fa-brands fa-twitter"></i></a>
+
+                    </div>
+                    <a href="./Abhishek Pratap Singh Resume_page-0001.pdf" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                        <input type="hidden" name="access_key" value="2c8de099-0847-4431-8800-19e3527dbb65">
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Abhishek Pratap Singh </p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcointains = document.getElementsByClassName("tab-cointains");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcointain of tabcointains) {
+            tabcointain.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0"
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px"
+    }
+
+</script>
+
+</html>
