@@ -164,7 +164,9 @@
             <h1 class="sub-title">My <span>Work</span></h1>
             <div class="work-list">
                 <div class="work">
+                    <div class="image">
                     <img src="./Untitled_Export-9vaLdktNy (1).jpeg" alt="">
+                    </div>
                     <div class="layer">
                         <h3>Amazon</h3>
                         <p>
@@ -178,7 +180,9 @@
                 </div>
 
                 <div class="work">
+                    <div class="image">
                     <img src="./download.avif" alt="">
+                </div>
                     <div class="layer">
                         <h3>Todo List</h3>
                         <p>
@@ -190,22 +194,147 @@
                     </div>
                 </div>
 
+                
                 <div class="work">
-                    <img src="https://ucarecdn.com/f3bb5d82-fd86-4fac-a968-801e316601be/-/scale_crop/800x800/smart/"
-                        alt="">
+                    <div class="image">
+                    <img src="https://ucarecdn.com/f3bb5d82-fd86-4fac-a968-801e316601be/-/scale_crop/800x800/smart/" alt="">
+                </div>
                     <div class="layer">
                         <h3>Random Quote Generator</h3>
                         <p>
+                           
                             I recently crafted a random quote generator using HTML, CSS, and JavaScript. HTML provided
                             the structure, CSS added a polished look, and JavaScript brought the dynamic functionality.
                             With a click of a button, the generator randomly displays quotes from a predefined array,
                             making it an engaging and visually appealing project that highlights the seamless
                             integration of these web technologies.</p>
+                        <a href="./to-do-list_project.html"><i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+
+                
+                <div class="work">
+                    <div class="image">
+                    <img src="./comiing.avif" alt="">
+                </div>
+                    <div class="layer">
+                        <h3>Comming Soon.....</h3>
+                        <p>
+                            Comming Soon......</p>
+                        <a href="./to-do-list_project.html"><i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+
+
+                <div class="work">
+                    <div class="image">
+                    <img src="./comiing.avif" alt="">
+                    </div>
+                    <div class="layer">
+                        <h3>Comming Soon.....</h3>
+                        <p>Comming Soon.....</p>
+                        <a href="./to-do-list_project.html"><i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+
+                
+                <div class="work">
+                    <div class="image">
+                    <img src="./comiing.avif" alt="">
+                </div>
+                    <div class="layer">
+                        <h3>Comming Soon.....</h3>
+                        <p>
+                            Comming Soon......</p>
+                        <a href="./to-do-list_project.html"><i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+
+
+
+                <div class="work">
+                    <div class="image">
+                    <img src="./comiing.avif" alt=""></div>
+                    <div class="layer">
+                        <h3>Comming Soon.....</h3>
+                        <p>
+                            Comming Soon......</p>
+                        <a href="./to-do-list_project.html"><i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="work">
+                    <div class="image">
+                    <img src="./comiing.avif" alt="">
+                    </div>
+                    <div class="layer">
+                        <h3>Comming Soon.....t</h3>
+                        <p>
+                            Comming Soon.....</p>
+                        <a href="./to-do-list_project.html"><i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="work">
+                    <div class="image">
+                    <img src="./comiing.avif" alt="">
+                    </div>
+                    <div class="layer">
+                        <h3>Comming Soon.....</h3>
+                        <p>
+                            Comming Soon.....</p>
+                        <a href="./to-do-list_project.html"><i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="work">
+                    <div class="image">
+                    <img src="./comiing.avif" alt="">
+                    </div>
+                    <div class="layer">
+                        <h3>Comming Soon.....</h3>
+                        <p>Comming Soon...../p>
+                        <a href="./to-do-list_project.html"><i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="work">
+                    <div class="image">
+                    <img src="./comiing.avif" alt="">
+                    </div>
+                    <div class="layer">
+                        <h3>Comming Soon.....</h3>
+                        <p>
+                            Comming Soon.....</p>
+                        <a href="./to-do-list_project.html"><i class="fa-solid fa-link"></i></i></a>
+                    </div>
+                </div>
+
+
+                <div class="work">
+                    <img src="./comiing.avif"
+                        alt="">
+                    <div class="layer">
+                        <h3>Comming Soon.....</h3>
+                        <p>
+                           Comming Soon.....</p>
                         <a href="./RandomQuote.html"><i class="fa-solid fa-link"></i></i></a>
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See More</a>
+            <button class="btn8">Show More</button>
         </div>
     </div>
 
@@ -275,8 +404,47 @@
     }
     function closemenu() {
         sidemenu.style.right = "-200px"
+        
     }
 
+    document.addEventListener("DOMContentLoaded", function () {
+        let loadmore = document.querySelector('.btn8');
+        let currentItem = 3;
+
+        loadmore.onclick = () => {
+            showItems();
+        };
+
+        function showItems() {
+            let boxes = document.querySelectorAll('.container .work-list .work');
+
+            for (let i = currentItem; i < currentItem + 3 && i < boxes.length; i++) {
+                boxes[i].style.display = 'flex'; // Adjusted from 'inline-block' to 'flex'
+            }
+
+            currentItem += 3;
+
+            // If all items are shown, hide the "Show More" button
+            if (currentItem >= boxes.length) {
+                loadmore.style.display = 'none';
+            }
+        }
+
+        // Initially hide all items beyond the first 3
+        hideItems();
+
+        function hideItems() {
+            let boxes = document.querySelectorAll('.container .work-list .work');
+            
+            for (let i = currentItem; i < boxes.length; i++) {
+                boxes[i].style.display = 'none';
+            }
+        }
+    });
+
+   
 </script>
+
+
 
 </html>
