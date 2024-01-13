@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote of the day</title>
+    <style>
+      
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+body{
+    background-color: #bbc6fa;
+}
+
+.quote-box{
+    background: #fff;
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+
+}
+
+.quote-box h2{
+
+    font-size: 32px;
+    margin-bottom: 40px;
+
+    position: relative;
+}
+
+.quote-box h2::after{
+    content: '';
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgb(23, 124, 229);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.quote-box blockquote{
+    font-size: 26px;
+    min-height: 110px;
+
+}
+
+.quote-box blockquote::before, .quote-box blockquote::after{
+
+    content: '"';
+}
+
+.quote-box span{
+    display: block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+.quote-box span::before{
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: rgb(23, 124, 229);
+    position: absolute;
+    top: 50%;
+    left: -30px;
+}
+.quote-box div{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-box button{
+    background-color: rgb(23, 124, 229);
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid rgb(23, 124, 229);
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+    
+}
+
+#tweet{
+    text-decoration: none;
+}
+.quote-box button img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.quote-box button:nth-child(2){
+    background-color: transparent;
+    color: #333;
+}
+
+.quote-box button:nth-child(2):hover{
+    background: rgb(185, 213, 243);
+    border: 3px solid #8eb4dd;
+    transition: 1.5s;
+}
+    </style>
+  </head>
+  <body>
+    <div class="quote-box">
+      <h2>Quote of the day</h2>
+      <blockquote id="quote">Loading...</blockquote>
+      <span id="author">Loading</span>
+      <div>
+        <button onclick="getNewQuote()">New Quote</button>
+       <button> <a id="tweet" target="_blank">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/2491px-Logo_of_Twitter.svg.png"
+            alt="Twitter Logo"
+          />
+          Tweet
+        </a></button>
+      </div>
+    </div>
+
+    <script>
+      const text = document.getElementById("quote");
+      const author = document.getElementById("author");
+      const tweetButton = document.getElementById("tweet");
+
+      const getNewQuote = async () => {
+        // API for quotes
+        var url = "https://type.fit/api/quotes";
+
+        // Fetch the data from the API
+        const response = await fetch(url);
+
+        // Convert response to JSON and store it in the quotes array
+        const allQuotes = await response.json();
+
+        // Generates a random number between 0 and the length of the quotes array
+        const indx = Math.floor(Math.random() * allQuotes.length);
+
+        // Store the quote present at the randomly generated index
+        const quote = allQuotes[indx].text;
+
+        // Store the author of the respective quote
+        const auth = allQuotes[indx].author;
+
+        // If author is null, set it to "Anonymous"
+        const authorText = auth == null ? "Anonymous" : "~ " + auth;
+        console.log(authorText);
+
+        // Function to dynamically display the quote and the author
+        text.innerHTML = quote;
+        author.innerHTML = authorText;
+
+        // Update the tweet button href
+        tweetButton.href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+          `${quote} ${authorText}`
+        )}`;
+      };
+
+      // Initial call to get a quote when the page loads
+      getNewQuote();
+    </script>
+  </body>
+</html>
