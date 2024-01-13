@@ -512,6 +512,33 @@
 
 </script>
 
+<script>
+    // Your existing code...
+
+    const roles = ["Front End","Back End","Databases","Full Stack Developer"];
+    const roleElement = document.getElementById("header").getElementsByTagName("p")[0];
+
+    function switchRoles() {
+        let roleIndex = 0;
+
+        function updateRole() {
+            gsap.to(roleElement, { opacity: 0, duration: 0.5, onComplete: () => {
+                roleElement.innerHTML = roles[roleIndex];
+                gsap.to(roleElement, { opacity: 1, duration: 0.5 });
+                roleIndex = (roleIndex + 1) % roles.length;
+            }});
+        }
+
+        setInterval(updateRole, 3000);
+    }
+
+    switchRoles();
+
+    // Your existing GSAP animations...
+
+</script>
+
+
 
 
 
