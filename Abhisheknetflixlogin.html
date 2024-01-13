@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="icon" href="../Media/image/nficon2023.ico">
+    <link rel="stylesheet" href="./surajprakash.css">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/netflix-font');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Netflix Font', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    
+    background-image:linear-gradient(90deg,rgba(0, 0, 0, 0.621),rgba(0, 0, 0, 0.621))
+     ,url(https://assets.nflxext.com/ffe/siteui/vlv3/ab4b0b22-2ddf-4d48-ae88-c201ae0267e2/0efe6360-4f6d-4b10-beb6-81e0762cfe81/IN-en-20231030-popsignuptwoweeks-perspective_alpha_website_medium.jpg);
+     width: 100vw;
+     height: 100vh;
+     background: cover;
+    background-repeat: no-repeat;
+  
+}
+section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width: 167px;
+    height: 90px;
+    margin: 0px;
+}
+section>#box1{
+    background-color: rgba(0, 0, 0, 0.726);
+ color: b3b3b398;
+ width: 450px;
+ height: auto;
+ padding: 60px 68px 40px 68px;
+ border-radius: 5px;
+}
+#box1 h1{
+    color: white;
+    font-weight: 500;
+    margin-bottom: 28px;
+}
+#box1 input{
+    display: block;
+    background-color: #f3f3f32d;
+    color: white;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 4px;
+    padding: 16px  20px;
+    font-size: 16px;
+}
+#box1 button{
+    display: block;
+    background-color: #e50914;
+    width: 100%;
+    height: 50px;
+    margin: 24px auto 12px auto;
+    padding: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#box2 input{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    
+    
+}
+#box2 label{
+    color: #b3b3b3;
+    font-size: 16px;
+}
+#box2 a{
+    display: inline-block;
+    margin-left: 94px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #b3b3b3;
+}
+#box3{
+
+    display: block;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+#box3>p{
+    display: inline-block;
+    margin-top: 16px;
+    color: #b3b3b398;
+
+}
+#box3>a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+#box3 span{
+    display: inline-block;
+    color: #b3b3b398;
+}
+#box3 span{
+    margin-top: 11px;
+    color: #b3b3b398;
+    font-size:13px;
+}
+#box3 span>a{
+    text-decoration: none;
+    color: #0071eb;
+}
+
+input:invalid+span{
+    visibility: visible;
+    
+}
+span{
+color: red;
+visibility: hidden;
+}
+
+
+    </style>
+</head>
+<body>
+    <img src="../Media/image/Netflix-Logo.wine.svg" alt="Netflix">
+    <section>
+    <div id="box1">
+        
+        <form >
+            <h1>Sign In</h1>
+            <input type="text" placeholder="Email or phone number" required>
+            <span>Please enter a valid email address or phone number.</span>
+            <input type="password" placeholder="Password" min="50" max="100">
+            <span>Your password must contain between 4 and 60 characters.</span>
+            <button>Sign In</button>
+            <div id="box2">
+               <input type="checkbox" checked>
+               <label>Remember me</label> 
+               <a href="">Need help?</a>
+            </div>
+            <div id="box3">
+                <p>New to Netflix?</p>
+                <a href="">Sign up now</a>
+                <span>This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href=""> Learn more.</a></span>
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>
