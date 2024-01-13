@@ -491,3 +491,23 @@ nav .fas{
         
         
     }
+
+
+    /* --------------------custom scrollbar------------------- */
+    ::-webkit-scrollbar{
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track{
+        background: #fff;
+    
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background: #ff004f;
+        border-radius: 10px;
+    }
+
+
+
+    
