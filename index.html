@@ -283,13 +283,18 @@
 
                         <div class="work">
                             <div class="image">
-                                <img src="./comiing.avif" alt="">
+                                <img src="./image galary.avif" alt="">
                             </div>
                             <div class="layer">
-                                <h3>Comming Soon.....</h3>
+                                <h3>Image Galary</h3>
                                 <p>
-                                    Comming Soon......</p>
-                                <a href="./to-do-list_project.html"><i class="fa-solid fa-link"></i></i></a>
+                                    "I recently crafted an image gallery for my website using HTML, CSS, and JavaScript.
+                                    The gallery showcases a sleek design with initial thumbnail views. To improve user
+                                    interaction, I implemented a 'show more' button. When clicked, it dynamically loads
+                                    additional images without the need for a full page refresh. This combination of HTML
+                                    for structure, CSS for styling, and JavaScript for interactivity results in a
+                                    responsive and visually appealing image gallery experience for visitors."</p>
+                                <a href="./Image Galary.html"><i class="fa-solid fa-link"></i></i></a>
                             </div>
                         </div>
 
@@ -346,7 +351,7 @@
                             </div>
                             <div class="layer">
                                 <h3>Comming Soon.....</h3>
-                                <p>Comming Soon...../p>
+                                <p>Comming Soon.....</p>
                                     <a href="./to-do-list_project.html"><i class="fa-solid fa-link"></i></i></a>
                             </div>
                         </div>
@@ -492,18 +497,18 @@
 
     gsap.from("#header h1", {
         x: 100,
-        opacity:0,
-        delay:0.5,
-        duration:0.5,
-        stagger:0.2
+        opacity: 0,
+        delay: 0.5,
+        duration: 0.5,
+        stagger: 0.2
 
     })
     gsap.from("#header p", {
         x: 100,
-        opacity:0,
-        delay:0.5,
-        duration:0.5,
-        stagger:0.2
+        opacity: 0,
+        delay: 0.5,
+        duration: 0.5,
+        stagger: 0.2
 
     })
 
@@ -515,18 +520,20 @@
 <script>
     // Your existing code...
 
-    const roles = ["Front End","Back End","Databases","Full Stack Developer"];
+    const roles = ["Front End", "Back End", "Databases", "Full Stack Developer"];
     const roleElement = document.getElementById("header").getElementsByTagName("p")[0];
 
     function switchRoles() {
         let roleIndex = 0;
 
         function updateRole() {
-            gsap.to(roleElement, { opacity: 0, duration: 0.5, onComplete: () => {
-                roleElement.innerHTML = roles[roleIndex];
-                gsap.to(roleElement, { opacity: 1, duration: 0.5 });
-                roleIndex = (roleIndex + 1) % roles.length;
-            }});
+            gsap.to(roleElement, {
+                opacity: 0, duration: 0.5, onComplete: () => {
+                    roleElement.innerHTML = roles[roleIndex];
+                    gsap.to(roleElement, { opacity: 1, duration: 0.5 });
+                    roleIndex = (roleIndex + 1) % roles.length;
+                }
+            });
         }
 
         setInterval(updateRole, 3000);
